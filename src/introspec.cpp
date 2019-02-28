@@ -13,6 +13,9 @@
 #include <nbrtos.h>
 #include <iointernal.h>
 
+// Comment out the below line with NNDK 2.8 and lower
+#include <config_obj.h>
+
 #include "introspec.h"
 
 LOGFILEINFO;
@@ -505,7 +508,9 @@ void LogAppRecords()   // might not work without AppUpdate and config_obj
     LogEscapedByte(KEY_START);
     LogRawByte(KEY_MESSAGE);
     int LogFd = GetExtraFD(0, &ioe);
-    // appdata.RenderToFd(LogFd,true);
+    // Comment out the below line with NNDK 2.8 and lower
+    appdata.RenderToFd(LogFd,true);
     LogRawByte(0);
     FreeExtraFd(LogFd);
 }
+

@@ -189,3 +189,4 @@ class FileLog
 #define LOGFILEINFO static FileLog fl("Source " __FILE__ " build on" __DATE__ "at" __TIME__ ".");
 
 #endif
+

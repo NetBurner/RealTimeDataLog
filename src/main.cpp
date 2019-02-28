@@ -48,9 +48,8 @@ extern "C" void UserMain(void *pd)
     printf("Starting our loop in UserMain()\r\n");
     while (1)
     {
-
         // Update data values that will get logged for 20 seconds
-        if (secs++ > 20)
+        if (++secs > 20)
         {
             bLog = false;
         }
