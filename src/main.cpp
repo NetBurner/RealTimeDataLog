@@ -20,14 +20,14 @@ LOGFILEINFO   // Logs the version of this file
 START_INTRO_OBJ(MainLogObject, "Log")
 public:
     int_element m_time{"time"};
-    float_element m_floatElem{"Float Element"};
-    uint16_element m_intElem{"Int Element"};
+    float_element m_floatElem{"FloatElement"};
+    uint16_element m_intElem{"IntElement"};
 
     char GetCharElem(){ return m_charElem; }
     void SetCharElem(char c) { m_charElem = c; }
 
 private:
-    char_element m_charElem{ "Char Element" };
+    char_element m_charElem{ "CharElement" };
 END_INTRO_OBJ;
 
 MainLogObject mainLog;
@@ -58,8 +58,8 @@ extern "C" void UserMain(void *pd)
             printf("Logging at %d secs\r\n", secs);
         }
         mainLog.m_time = secs;
-        mainLog.m_floatElem = mainLog.m_floatElem / 2;
-        mainLog.m_intElem = mainLog.m_intElem * 2;
+        mainLog.m_floatElem = ( mainLog.m_floatElem / 2 ) + 1;
+        mainLog.m_intElem = ( mainLog.m_intElem * 2 ) + 1;
         mainLog.SetCharElem(mainLog.GetCharElem() + 1);
         mainLog.Log();
 
