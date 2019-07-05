@@ -1,4 +1,4 @@
 # Real-time Data Logging for NetBurner
 
 NetBurner example code for real-time data logging in binary with decoding command-line tool.
-See "Real-Time Data Logging Example" article on www.netburner.com for more info.
+See the "Real-Time Data Logging for Embedded IoT" article at https://www.netburner.com/learn/real-time-data-logging-for-embedded-iot/ for more info.
